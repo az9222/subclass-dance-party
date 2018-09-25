@@ -15,15 +15,25 @@ $(document).ready(function() {
      * A new object of the given type will be created and added
      * to the stage.
      */
+<<<<<<< HEAD
 
      //grabs data-dancer-maker-function-name = "BlinkyDancer"
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name'); //
+=======
+    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+    // grabs value of data-dancer-maker-function-name="BlinkyDancer"
+    // dancerMakerFunctionName = "BlinkyDancer"
+>>>>>>> faeefc37083374c58e80ef260c6b5ac96111d84b
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName]; //so window looks for dancerMakerFunctionName and finds the BlinkyDancer function which makes a dancer obj
 
     // make a dancer with a random position
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> faeefc37083374c58e80ef260c6b5ac96111d84b
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
