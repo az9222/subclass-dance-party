@@ -18,17 +18,23 @@ $(document).ready(function() {
 
      //grabs data-dancer-maker-function-name = "BlinkyDancer"
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name'); //
-    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+    // var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
     // grabs value of data-dancer-maker-function-name="BlinkyDancer"
     // dancerMakerFunctionName = "BlinkyDancer"
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName]; //so window looks for dancerMakerFunctionName and finds the BlinkyDancer function which makes a dancer obj
 
+    var height = $("body").height();
+    var width = $("body").width();
+
+    function randomRange(min, max) {
+      return Math.random() * (max - min) + min;
+    }
     // make a dancer with a random position
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      height * randomRange(0.6, 0.8),
+      width * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);

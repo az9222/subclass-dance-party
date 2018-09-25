@@ -10,7 +10,10 @@ Dancer.prototype.step = function() {
     // the basic dancer doesn't do anything interesting at all on each step,
     // it just schedules the next step
     setTimeout(this.step.bind(this), this.timeBetweenSteps);
-}; //this.step.bind(this) used to be dancer.step and we want to ensure that when we call it, it is with the Dancer so we want to make sure that the context of this is clear
+    // this.step.bind(this) used to be dancer.step and we want to ensure that when we call it, 
+    // it is with the Dancer so we want to make sure that the context of this is clear
+}; 
+    
 
 Dancer.prototype.constructor = Dancer;
 
