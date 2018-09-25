@@ -18,7 +18,8 @@ Dancer.prototype.constructor = Dancer;
 Dancer.prototype.step = function() {
     // the basic dancer doesn't do anything interesting at all on each step,
     // it just schedules the next step
-    setTimeout(this.step, timeBetweenSteps); // TODO:
+    // setTimeout((fn) => {this.step; fn();}, this.timeBetweenSteps); // TODO:
+    setTimeout(this.step, this.timeBetweenSteps); 
   };
 
 Dancer.prototype.setPosition = function(top, left) {

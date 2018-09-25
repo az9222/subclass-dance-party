@@ -12,10 +12,15 @@ BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.constructor = BlinkyDancer;
 
 BlinkyDancer.prototype.step = function() {
-  console.log(this);
-  var oldStep = this.step; //TODO
-  oldStep();
+  //console.log(this, this.step);
+  // var toggle = function() {
+  //   this.$node.toggle();
+  // }
+  
+  Dancer.prototype.step.call(this, toggle); //TODO
+  // oldStep();
   this.$node.toggle();
+  
 }
 
 /*
