@@ -38,5 +38,24 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
+
+  $('.addLineUpButton').on('click', function(event) {
+    var height = $("body").height();
+    var width = $("body").width();
+    var spaceBetween = width / window.dancers.length;
+
+
+    for (var d = 0; d < window.dancers.length; d++) {
+        // window.dancers[d].moveTo(d * spaceBetween, height * 0.9);
+        dancers[d].$node.stop();
+        dancers[d].$node.css({
+            "left" : d * spaceBetween,
+            "top" : height * 0.9
+        });
+    }
+
+  });
+
 });

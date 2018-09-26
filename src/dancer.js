@@ -27,5 +27,16 @@ Dancer.prototype.setPosition = function(top, left) {
     this.$node.css(styleSettings);
 };
 
+Dancer.prototype.transform = function(x, y) {
+    var origLeft = parseInt(this.$node.css("left"));
+    var origTop = parseInt(this.$node.css("top"));
+    this.$node.animate({left: origLeft + x, top: origTop + y}, 1000);
+}
+
+Dancer.prototype.moveTo = function(x, y) {
+    this.$node.animate({left: x, top: y}, 500);
+}
+
+
     // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
     // this one sets the position to some random default point within the body

@@ -2,6 +2,7 @@ var FadeDancer = function(top, left, timeBetweenSteps) {
         Dancer.call(this, top, left, timeBetweenSteps);
         this.$node.addClass("fade");
         this.$node.prepend('<img class="fade" src="src/imgs/banana.gif" />')
+        
         // this.$node = $('<span class="dancer fade"><img class="fade" src="src/imgs/banana.gif"></span>');
     }
         // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -16,5 +17,9 @@ var FadeDancer = function(top, left, timeBetweenSteps) {
         // See http://api.jquery.com/category/effects/ for this and
         // other effects you can use on a jQuery-wrapped html tag.
         // this.$node.fadeToggle();
-        this.$node.animate({left: 150}, 1000).animate({right: 150}, 1000);
+        var x = Math.random()*40;
+        var y = Math.random()*10;
+        this.transform(x, y);
+        // this.$node.fadeToggle();
     };
+
