@@ -1,18 +1,9 @@
-/*@-webkit-keyframes spinnerRotate
-{
-   from{-webkit-transform:rotate(0deg);}
-   to{-webkit-transform:rotate(360deg);}
-}*/
-
 body, html{
   height:100%;
 }
 body{
   margin: 0px;
   background-color:#444;
-  background-image: url("src/imgs/disco.png");
-  background-position: center;
-  background-size: cover;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -30,36 +21,7 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:1px solid red;
+  border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
-img.fade {
-  height: 100px;
-  width: 100px;
-  border: none;
-  border-radius: none;
-}
-.line{
-  display: flex;
-  flex-wrap: wrap;
-}
-img.rotate {
- height: 100px;
- width: 100px;/*
- position:absolute;
- -webkit-animation-name: spinnerRotate;
- -webkit-animation-iteration-count: infinite;
- -webkit-animation-timing-function: linear;
- -webkit-animation-animation-duration: 3s;
- -webkit-animation-animation-name: slidein;*/
- transform: rotate(45deg);
-}
-
-
-/*img.rotate {
-    -ms-transform: rotate(20deg); 
-    -webkit-transform: rotate(20deg); 
-    transform: rotate(20deg);
-}
-*/
